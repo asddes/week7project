@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1>
+            <a href="/">Home</a>
+            <a href="/newtask">Add Task</a>
+            <a href="/listdevelopers">List Developers</a>
+        </h1>
+        <form action="/newdeveloper" method="POST">
+            First Name <input type="text" class="form-control" name = "fname" /> </br>
+            Last Name <input type="text" class="form-control" name = "lname" /> </br>
+            Level <select name="level" class="form-control" >
+                    <option value="Beginner" class="form-control">Beginner</option>
+                    <option value="Expert" class="form-control">Expert</option>
+                </select></br>
+            State  <input type="text" class="form-control" name = "state" /> </br>
+            Suburb  <input type="text" class="form-control" name = "suburb" /> </br>
+            Street  <input type="text" class="form-control" name = "street" /> </br>
+            Unit  <input type="text" class="form-control" name = "unit" /> </br>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
