@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1>
+            <a href="/">Home</a>
+        </h1>
+        <form action="/newdelete" method="POST">
+            Task Name <select name="delid" class="form-control" >
+                    <% for(let i=0; i<tasks.length; i++){ %>
+                    <option value=<%=tasks[i]._id%> class="form-control"><%= tasks[i].name%></option>
+                    <%} %>
+                </select></br>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>

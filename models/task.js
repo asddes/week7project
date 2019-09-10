@@ -12,7 +12,7 @@ let taskSchema = mongoose.Schema({
         type: String,
         validate: {
             validator: function(statusValue) {
-                return statusValue == "InProgress " || statusValue == "Complete ";
+                return statusValue == "In Progress" || statusValue == "Complete";
             },
             message: "Status Should be InProgress or Complete."
         }

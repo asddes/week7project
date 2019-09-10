@@ -144,3 +144,21 @@ app.post("/update", function(req, res) {
 
     res.redirect("/listtasks");
 });
+
+app.get("/newdelete", function(req, res) {
+    console.log("New Page");
+    Task.find({}, "name", function(err, data){
+        if (err) console.log(err);
+        console.log(data);
+        res.render("newDelete.html", {tasks: data})
+    });
+});
+app.post("/newdelete", function(req, res){
+    console.log(req.body.delname);
+    //Task.findById(req.body.delname)
+    Task.findById(req.body.delid, function(err, doc){
+        if (err) console.log(err);
+        doc.deleteOne();
+    });
+    res.redirect("/newdelete")
+});
